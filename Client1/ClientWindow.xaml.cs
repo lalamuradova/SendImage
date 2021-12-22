@@ -52,7 +52,7 @@ namespace Client1
                     MessageBox.Show("Connected to the server . . . ");
 
                     var bytes = GetBytesOfImage(Filename);
-                    socket.Send(bytes);                   
+                    socket.Send(bytes);                  
 
                 }
                 else
