@@ -7,26 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Button Command="{Binding RunCommand}" FontSize="30">Run</Button>
-            <ListBox 
+        
+            <StackPanel>
+                <Button Command="{Binding RunCommand}" FontSize="30">Run</Button>
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ListBox 
                 ItemsSource="{Binding AppImage}"
                 x:Name="commandListbox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-                
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding RemoteEndPoint }" Grid.Column="0" x:Name="ipadress" FontSize="30" ></TextBlock>
-                            <Image Margin="30" Source="{Binding ImagePath}" Grid.Column="1" x:Name="image" Height="100" Width="100"  />
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            
-        </StackPanel>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding RemoteEndPoint }" Grid.Column="0" x:Name="ipadress" FontSize="30" ></TextBlock>
+                                <Image Margin="30" Source="{Binding ImagePath}" Grid.Column="1" x:Name="image" Height="100" Width="100"  />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+     </ScrollViewer>
+            </StackPanel>
+   
+        
     </Grid>
 </Window>

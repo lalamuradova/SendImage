@@ -54,7 +54,6 @@ namespace Client1
                     var bytes = GetBytesOfImage(Filename);
                     socket.Send(bytes);                   
 
-                    MessageBox.Show("Image sended...");
                 }
                 else
                 {
